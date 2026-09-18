@@ -1,0 +1,4 @@
+pypdf
+langchain-community
+langchain-core
+fonttools

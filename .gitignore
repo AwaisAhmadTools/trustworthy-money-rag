@@ -1,0 +1,5 @@
+corpus/*
+!corpus/.gitkeep
+__pycache__/
+*.py[cod]
+.venv/
