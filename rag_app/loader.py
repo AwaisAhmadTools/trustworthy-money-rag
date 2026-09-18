@@ -13,4 +13,6 @@ def load_corpus_documents(corpus_dir: Path = CORPUS_DIR) -> list[Document]:
             documents.extend(PyPDFLoader(str(file_path)).load())
         elif suffix in (".txt", ".md"):
             documents.extend(TextLoader(str(file_path)).load())
+    if not documents:
+        raise FileNotFoundError(f"No documents loaded from {corpus_dir}. Add PDFs or .txt files there first.")
     return documents
